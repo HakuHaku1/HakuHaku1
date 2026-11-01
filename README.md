@@ -15,3 +15,58 @@ Hi, I'm Hakuryu 👋 an aspiring game developer and web developer from the Phili
 ---
 [![](https://komarev.com/ghpvc/?username=HakuHaku1&icon=1&color=9)](https://visitcount.itsvg.in)
 
+".github/workflows/snake.yml"
+
+name: Generate Snake
+
+on:
+  schedule:
+    - cron: "0 */12 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Generate Snake Animation
+        uses: Platane/snk@v3
+        with:
+          github_user_name: vickyhubhai
+          outputs: |
+            dist/github-contribution-grid-snake.svg?palette=github&color_snake=%2339d353
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=%2339d353
+
+      - name: Push Snake to Output Branch
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: output
+          publish_dir: dist
+
+---
+
+Add this to your "README.md"
+
+## 🐍 Contribution Snake
+
+<p align="center">
+  <picture>
+    <source
+      media="(prefers-color-scheme: dark)"
+      srcset="https://raw.githubusercontent.com/vickyhubhai/vickyhubhai/output/github-contribution-grid-snake-dark.svg"
+    />
+    <source
+      media="(prefers-color-scheme: light)"
+      srcset="https://raw.githubusercontent.com/vickyhubhai/vickyhubhai/output/github-contribution-grid-snake.svg"
+    />
+    <img
+      alt="GitHub Contribution Snake"
+      src="https://raw.githubusercontent.com/vickyhubhai/vickyhubhai/output/github-contribution-grid-snake.svg"
+    />
+  </picture>
+</p>
+
