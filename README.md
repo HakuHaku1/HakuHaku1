@@ -13,7 +13,5 @@ Hi, I'm Hakuryu 👋 an aspiring game developer and web developer from the Phili
 ![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=merko)
 
 ---
-[![](https://komarev.com/ghpvc/?username=HakuHaku1&icon=1&color=9)](https://visitcount.itsvg.in)
-
 ![snake gif](https://github.com/HakuHaku1/HakuHaku1/blob/output/github-snake-dark.svg)
 
